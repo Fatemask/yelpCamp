@@ -1,0 +1,58 @@
+<%- include('../partials/header') %>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <p class="lead">YelpCamp</p>
+            <div class="list-group">
+                <li class="list-group-item active">Info 1</li>
+                <li class="list-group-item">Info 2</li>
+                <li class="list-group-item">Info 3</li>
+                <li><a href="/campground">Go Back</a></li>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="img-thumbnail">
+                <img id="imgsize" class="img-responsive" src="<%=campg.image%>">
+                <div class="caption-full p-3">
+                    <h4 class="float-right">$<%=campg.price%>/night</h4>
+                    <h4><a><%=campg.name%></a></h4>
+                    <p><%=campg.description%></p>
+                    <em><p>Submitted by <a href="/user/<%= campg.author.id%>" ><%=campg.author.username%></a>, <%=moment(campg.createdAt).fromNow()%> </p></em>
+                    <%if(currentUser && campg.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){%>
+                    <a class="btn btn-sm btn-warning" href="/campground/<%=campg._id%>/edit">Edit</a>
+                    
+                    <form id="deletebtn" action="/campground/<%=campg._id%>?_method=DELETE" method="POST">
+                    <button class="btn btn-sm btn-danger">Delete</button>
+                    </form>
+                    <% } %>
+                </div>
+            </div>
+            <div class="card card-body bg-light mt-2">
+                <div class="text-right">
+                        <a class="btn btn-success" href="/campground/<%=campg._id%>/comment/new">Add new Comment</a>
+                </div>
+                <hr>
+            <%campg.comment.forEach(function(comment){ %>
+                <div class="row">
+                    <div class="col-lg-12">
+                         <b><%= comment.author.username %></b> 
+                         <span class="float-right"><%=moment(campg.createdAt).fromNow()%></span>
+                         <p>
+                             <%= comment.text%>
+                         </p>
+                         <%if(currentUser && comment.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){%>
+                         <a class="btn btn-sm btn-warning" href="/campground/<%=campg._id%>/comment/<%=comment._id%>/edit">Edit</a>
+                         <form id="deletebtn" action="/campground/<%=campg._id%>/comment/<%=comment._id%>?_method=DELETE" method="POST">
+                             <button class="btn btn-sm btn-danger">Delete</button>
+                         </form>
+                         <% } %>
+                    </div>
+                </div>
+            <% }); %>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<%- include('../partials/footer') %>

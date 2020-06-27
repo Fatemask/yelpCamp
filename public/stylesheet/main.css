@@ -1,0 +1,36 @@
+.img-thumbnail img{
+    width:100%;
+}
+
+.img-thumbnail{
+    padding:0%;
+}
+
+#deletebtn{
+    display:inline;
+}
+
+#profile{
+    padding-left:50px;
+}
+
+#imgnav{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+#imgprofile{
+    vertical-align: middle;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+#name{
+    display: block;
+    text-align:center;
+    background: #d3d3d3;
+    height:7vh;
+}
+
