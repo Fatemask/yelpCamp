@@ -26,6 +26,8 @@ app.use(exp.static(__dirname + "/public"));
 console.log(__dirname);
 app.use(methodOverride("_method"));
 app.use(flash());
+// mongoose.connect("mongodb://localhost/yelp_camp_v7",{ useNewUrlParser: true });
+mongoose.connect("mongodb+srv://Stella:mudd7059@cluster0-7l8xn.mongodb.net/yelp_camp?retryWrites=true&w=majority",{ useNewUrlParser: true });
 // seedDB(); //commenting for now
 
 //passport configuration
