@@ -52,7 +52,7 @@ app.use(indexRoute);
 app.use("/campground", campRoute);
 app.use("/campground/:id/comment", commentRoute);
 
-
-app.listen(5000, function(){
+var PORT=process.env.PORT || 5000;
+app.listen(PORT, function(){
     console.log("Yelp Camp Server !!!");
 })
