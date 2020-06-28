@@ -20,7 +20,8 @@ var commentRoute = require("./routes/comments"),
 
 
 // mongoose.connect("mongodb://localhost/yelp_camp_v7",{ useNewUrlParser: true });
-mongoose.connect("process.env.DATABASE",{ useNewUrlParser: true , useCreateIndex:true, useUnifiedTopology: true}).then(()=>{
+var url= process.env.DATABASE || "mongodb://localhost/yelp_camp_v7";
+mongoose.connect( url,{ useNewUrlParser: true , useCreateIndex:true, useUnifiedTopology: true}).then(()=>{
     console.log("connected to mongo");
 }).catch(err =>{
     console.log("ERROR:", err.message);
