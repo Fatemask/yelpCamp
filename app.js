@@ -19,15 +19,19 @@ var commentRoute = require("./routes/comments"),
     indexRoute    = require("./routes/index");
 
 
-mongoose.connect("mongodb://localhost/yelp_camp_v7",{ useNewUrlParser: true });
+// mongoose.connect("mongodb://localhost/yelp_camp_v7",{ useNewUrlParser: true });
+mongoose.connect("process.env.DATABASE",{ useNewUrlParser: true , useCreateIndex:true, useUnifiedTopology: true}).then(()=>{
+    console.log("connected to mongo");
+}).catch(err =>{
+    console.log("ERROR:", err.message);
+});
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(exp.static(__dirname + "/public"));
 console.log(__dirname);
 app.use(methodOverride("_method"));
 app.use(flash());
-// mongoose.connect("mongodb://localhost/yelp_camp_v7",{ useNewUrlParser: true });
-mongoose.connect("mongodb+srv://Stella:mudd7059@cluster0-7l8xn.mongodb.net/yelp_camp?retryWrites=true&w=majority",{ useNewUrlParser: true });
+
 // seedDB(); //commenting for now
 
 //passport configuration
