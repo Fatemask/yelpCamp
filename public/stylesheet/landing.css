@@ -40,30 +40,45 @@ body {
 }
 
 .slideshow li:nth-child(1) { 
-  background-image: url(https://www.google.com/url?sa=i&source=imgres&cd=&cad=rja&uact=8&ved=2ahUKEwj0o7OIiqXqAhUHfX0KHW3zDggQjRx6BAgBEAQ&url=https%3A%2F%2Fwallpaperaccess.com%2Flee-jong-suk&psig=AOvVaw0274MqqdhaIZq0eBriBgop&ust=1593453248562130)
+  background-image: url(https://i.imgur.com/iYykZre.jpeg);
   /* http://i.imgur.com/K3mPv14.jpg  */
 }
 .slideshow li:nth-child(2) { 
-  background-image: url(  https://www.google.com/imgres?imgurl=http%3A%2F%2Fpm1.narvii.com%2F6260%2F8649e98e8691d55318bba0bd5772761a113171f5_00.jpg&imgrefurl=https%3A%2F%2Faminoapps.com%2Fc%2Fk-pop%2Fpage%2Fitem%2Fji-chang-wook%2FMlI0_I7NMjbQDGj6JwVbB6MwLgGzNR&tbnid=ThElREvrjAWtuM&vet=10CBAQxiAoB2oXChMI4M6Jxoql6gIVAAAAAB0AAAAAEAc..i&docid=KHXzfrfIU5g-WM&w=383&h=512&itg=1&q=jee%20chan%20wook%20high%20resolution%20images&hl=en&ved=0CBAQxiAoB2oXChMI4M6Jxoql6gIVAAAAAB0AAAAAEAc
-  );
-  animation-delay: 5s; 
+  background-image: url(https://i.imgur.com/4hVK5I4.jpg);
+    animation-delay: 5s; 
   /* http://i.imgur.com/SBEmFpv.jpg */
 }
 .slideshow li:nth-child(3) { 
-  background-image: url(https://www.google.com/imgres?imgurl=https%3A%2F%2Fi.pinimg.com%2F236x%2F42%2F84%2F32%2F42843258c85a7aab7f4de7d3f605999b--twitter.jpg&imgrefurl=https%3A%2F%2Fwww.pinterest.com%2Fdbirdl%2Flee-min-ho%2F&tbnid=SxnXOnyEeyCahM&vet=10CBkQxiAoB2oXChMI0M-m-Yql6gIVAAAAAB0AAAAAEAY..i&docid=5tNDxSbjdp70aM&w=236&h=320&itg=1&q=lee%20min%20ho%20high%20resolution%20images&hl=en&ved=0CBkQxiAoB2oXChMI0M-m-Yql6gIVAAAAAB0AAAAAEAY);
+  background-image: url(https://i.imgur.com/WZdLjn8.jpg);
   animation-delay: 10s; 
   /* http://i.imgur.com/emvhOnb.jpg */
 }
 .slideshow li:nth-child(4) { 
-  background-image: url();
+  background-image: url(https://i.imgur.com/vtdq8lf.jpeg);
   animation-delay: 15s; 
   /* http://i.imgur.com/2LSMCmJ.jpg */
 }
 .slideshow li:nth-child(5) { 
-  background-image: url();
+  background-image: url(https://i.imgur.com/mUp8i0a.jpeg);
   animation-delay: 20s; 
   /* http://i.imgur.com/TVGe0Ef.jpg */
 }
+.slideshow li:nth-child(6) { 
+  background-image: url(https://i.imgur.com/Mk8MXc6.jpeg);
+  animation-delay: 25s; 
+  /* http://i.imgur.com/TVGe0Ef.jpg */
+}
+.slideshow li:nth-child(7) { 
+  background-image: url(https://i.imgur.com/Mk8MXc6.jpeg);
+  animation-delay: 30s; 
+  /* http://i.imgur.com/TVGe0Ef.jpg */
+}
+.slideshow li:nth-child(8) { 
+  background-image: url(https://i.imgur.com/7vxVXhr.jpeg);
+  animation-delay: 35s; 
+  /* http://i.imgur.com/TVGe0Ef.jpg */
+}
+
 
 @keyframes imageAnimation { 
   0% { 
