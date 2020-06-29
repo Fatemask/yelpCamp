@@ -3,7 +3,7 @@
     <div class="col-md-8 mt-4">
         <div id="profile">
             <div>
-                <h3><%=profile.username%></h3>
+                <h2><%=profile.username%></h2>
                 <h4><%=profile.firstName%>  <%=profile.lastName%></h4>
             </div> 
             <p>
@@ -20,7 +20,7 @@
 </div>
 
 <div id="name" class="row mt-4">
-    <div >
+    <div class="pt-1 pb-1" >
         <h3><%=profile.username%>'s Campgrounds</h3>
     </div>
 </div>
@@ -29,11 +29,11 @@
    <div class="row text-centre mt-4" >  
         <% camp.forEach(function(camp){ %>
         <div class="col-md-3 col-sm-6">
-            <div class="img-thumbnail">
-                <img style="width:100% " src=" <%=camp.image%>" >
+            <div class="img-thumbnail mt-4">
+                <div class="campimage" style="background-image: url(<%=camp.image%>);"></div>
                 <div style="text-align:center; padding:2px" class="caption">
-                    <h4><%=camp.name%></h4>
-                    <a href="/campground/<%=camp._id%>" class="btn btn-primary">More Info</a>
+                    <h4><%=camp.name.substr(0,15)%></h4>
+                    <a href="/campground/<%=camp._id%>" class="btn btn-primary mb-2">More Info</a>
                 </div>
             </div>    
         </div>

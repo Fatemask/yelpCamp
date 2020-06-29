@@ -31,6 +31,12 @@
     display: block;
     text-align:center;
     background: #d3d3d3;
-    height:7vh;
+}
+
+.campimage{
+    height: 200px;
+    width: 100%;
+    background-size: cover !important;
+    background-position: center !important;
 }
 
