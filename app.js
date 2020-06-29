@@ -5,6 +5,7 @@ var exp                = require("express"),
  methodOverride        = require("method-override"),
  flash                 = require("connect-flash"),
  ejss                  = require("ejs-lint"),
+ sanatizeCode          = require("express-sanitizer"),
  camp                  = require("./models/campgrounds"),
  seedDB                = require("./seeds"),
  Comment               = require("./models/comments"),
@@ -27,6 +28,7 @@ mongoose.connect( url,{ useNewUrlParser: true , useCreateIndex:true, useUnifiedT
     console.log("ERROR:", err.message);
 });
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(sanatizeCode());
 app.set("view engine", "ejs");
 app.use(exp.static(__dirname + "/public"));
 console.log(__dirname);

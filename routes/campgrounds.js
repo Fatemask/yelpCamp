@@ -2,6 +2,7 @@ var express= require("express");
 var router=express.Router();
 var camp= require("../models/campgrounds");
 var middleware = require("../middleware");
+var sanatizeCode          = require("express-sanitizer");
 require('dotenv').config();
 var multer = require('multer');
 //  Upload image
@@ -61,6 +62,7 @@ router.get("/", function(req, res){
 
 //CREATE
 router.post("/", middleware.isLoggedIn, upload.single('image'), function(req, res) {
+    req.body.campground.description= req.sanitize(req.body.campground.description);
     cloudinary.v2.uploader.upload(req.file.path, function(err, result) {
       if(err) {
         req.flash('error', err.message);
@@ -121,6 +123,7 @@ router.get("/:id/edit", middleware.checkCampgroundOwnership, function(req, res){
 
 //Update route
 router.put("/:id", upload.single('image'), function(req, res){
+    req.body.campground.description= req.sanitize(req.body.campground.description);
     camp.findById(req.params.id, async function(err, campground){
         if(err){
             req.flash("error", err.message);

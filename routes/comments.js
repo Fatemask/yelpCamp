@@ -21,6 +21,7 @@ router.get("/new", middleware.isLoggedIn, function(req, res) {
 
 //CREATE
 router.post("/", middleware.isLoggedIn, function(req,res){
+    req.body.comment.text= req.sanitize(req.body.comment.text);
     camp.findById(req.params.id, function(err, campg) {
        if(err){
            console.log(err);
@@ -58,6 +59,7 @@ router.get("/:comment_id/edit", middleware.checkCommentOwnership, function(req, 
 
 //update route
 router.put("/:comment_id", middleware.checkCommentOwnership, function(req, res){
+    req.body.comment.text= req.sanitize(req.body.comment.text);
    Comment.findByIdAndUpdate(req.params.comment_id, req.body.comment, function(err, updatecom){
      if(err){
          console.log(err);

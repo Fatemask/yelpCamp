@@ -66,3 +66,9 @@ a.navbar-brand{
 .list-group-item.active {
     background-color: #457b9d;
 }
+
+@media only screen and (min-width: 768px){
+    #campname{
+        font-size: 1.3rem;
+    }
+}
