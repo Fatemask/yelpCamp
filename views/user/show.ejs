@@ -4,7 +4,7 @@
         <div id="profile">
             <div>
                 <h2><%=profile.username%></h2>
-                <h4><%=profile.firstName%>  <%=profile.lastName%></h4>
+                <h5><%=profile.firstName%>  <%=profile.lastName%></h5>
             </div> 
             <p>
                 <%=profile.bio%>
@@ -33,7 +33,7 @@
                 <div class="campimage" style="background-image: url(<%=camp.image%>);"></div>
                 <div style="text-align:center; padding:2px" class="caption">
                     <h4><%=camp.name.substr(0,15)%></h4>
-                    <a href="/campground/<%=camp._id%>" class="btn btn-primary mb-2">More Info</a>
+                    <a href="/campground/<%=camp._id%>" class="btn moreinfo mb-2">More Info</a>
                 </div>
             </div>    
         </div>
@@ -41,6 +41,4 @@
     </div> 
 </div>
 
-
-    
 <%- include('../partials/footer') %>

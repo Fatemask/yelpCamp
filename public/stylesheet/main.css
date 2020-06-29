@@ -30,7 +30,8 @@
 #name{
     display: block;
     text-align:center;
-    background: #d3d3d3;
+    background: #457b9d;
+    color:white;
 }
 
 .campimage{
@@ -40,3 +41,28 @@
     background-position: center !important;
 }
 
+.navbar{
+    background-color: #1d3557;
+}
+
+li.nav-item a.nav-link{
+    color:white;
+}
+
+li.nav-item a.nav-link:hover{
+    background-color: #457b9d;
+    border-radius: 20%;
+}
+
+a.navbar-brand{
+    color:white;
+}
+
+.moreinfo{
+    background-color: #457b9d;
+    color:white;
+}
+
+.list-group-item.active {
+    background-color: #457b9d;
+}

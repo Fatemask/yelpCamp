@@ -1,12 +1,12 @@
 <%- include ('../partials/header')%>
 
 <div class="container">
-    <header class="jumbotron">
+    <header class="jumbotron campimage" style="background-image:url(https://images.pexels.com/photos/158672/fog-forest-mountain-world-clouds-158672.jpeg); height: 100%;">
         <div class="conatiner">
-           <h1>Welcome to Yelp Camp!!!</h1> 
+           <h1><i class="fa fa-angellist mr-2"></i>Welcome to Yelp Camp!!!</h1> 
            <p>The best place for Camping Lovers!!</p>
            <p>
-               <a class="btn btn-large btn-primary" href="/campground/new">Add New Campground</a>
+               <a class="btn btn-large moreinfo" href="/campground/new">Add New Campground</a>
            </p>
         </div> 
     </header>
@@ -35,7 +35,7 @@
                 <!-- <img style="width:100% " src=" <%=camp.image%>" > -->
                 <div class="caption">
                     <h4><%=camp.name.substr(0,15)%></h4>
-                    <a href="/campground/<%=camp._id%>" class="btn btn-primary mb-2">More Info</a>
+                    <a href="/campground/<%=camp._id%>" class="btn moreinfo mb-2">More Info</a>
                 </div>
             </div>    
         </div>

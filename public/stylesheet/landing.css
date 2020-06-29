@@ -101,3 +101,9 @@ body {
 .no-cssanimations .slideshow li {
 	opacity: 1;
 }
+
+
+.moreinfo{
+  background-color: #457b9d;
+  color:white;
+}
